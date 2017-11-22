@@ -1,0 +1,32 @@
+{
+  "name": "auth-gateway",
+  "version": "0.0.1",
+  "description": "A simple example of an Auth Gateway",
+  "repository": "https://github.com/nicklee1990/auth-gateway-example",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nick Lee",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  },
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.2",
+    "express-flash": "0.0.2",
+    "express-session": "^1.15.6",
+    "http-proxy-middleware": "^0.17.4",
+    "jsonwebtoken": "^8.1.0",
+    "mongoose": "^4.13.4",
+    "passport": "^0.4.0",
+    "passport-jwt": "^3.0.1",
+    "passport-local": "^1.0.0",
+    "pug": "^2.0.0-rc.4"
+  }
+}

@@ -1,0 +1,19 @@
+extends layout.pug
+
+block header
+    h1 Please Login
+
+block content
+    if (messages.length > 0)
+        ul
+            each val in messages
+                li= val
+    form(action="/login", method="post")
+        div
+            label Username:
+            input(name="username")
+        div
+            label Password:
+            input(type="password", name="password")
+        div
+            input(type="submit", value="Log In")
