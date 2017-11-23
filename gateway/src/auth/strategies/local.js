@@ -10,7 +10,7 @@ const handleAuthFail = (done) => {
 };
 
 // Setting up local login strategy
-const local = new LocalStrategy(function (email, password, done) {
+const local = new LocalStrategy({usernameField: 'email'}, function (email, password, done) {
   User.findOne({email: email})
     .then(user => {
       if (!user) {

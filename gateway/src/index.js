@@ -21,12 +21,12 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(cookieParser(process.env.AUTH_SECRET || 'secret', {
   domain: process.env.DOMAIN
 }));
-app.use(flash());
 app.use(session({
   secret: process.env.AUTH_SECRET || 'secret',
   resave: false,
   saveUninitialized: true,
 }));
+app.use(flash());
 
 // Configure passport
 passport.use(jwtStrategy);
